@@ -39,13 +39,7 @@ public class main1 {
         enemyBattleField [1][6] = 1;
         enemyBattleField [1][7] = 1;
         enemyBattleField [1][8] = 1;
-        System.out.print("Enemy Board: \n");
-        for(int i=0; i<10; i++){
-            for(int j=0; j<10; j++){
-                System.out.print(enemyBattleField[j][i] +" ");
-            }
-            System.out.println();
-        }
+
     }
 
 

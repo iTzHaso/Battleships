@@ -22,7 +22,7 @@ public class mainMenuController{
 
     @FXML
     void vscpu(MouseEvent event) throws Exception{
-        Parent vscpuWindow = FXMLLoader.load(main1.class.getResource("vscpu.fxml"));
+        Parent vscpuWindow = FXMLLoader.load(main1.class.getResource("boatpositionsetup.fxml"));
         Scene s = new Scene(vscpuWindow);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(s);

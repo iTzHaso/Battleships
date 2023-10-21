@@ -1,7 +1,7 @@
 import java.util.*;
 
-
-
+import javafx.fxml.*;
+import javafx.scene.*;
 
 
 public class main1 {
@@ -142,7 +142,7 @@ public class main1 {
 
     }
 
-    public static void main(String[] args){
+    public static void game (String[] args){
 
        boolean wl = false;
        int xCoord, yCoord;
@@ -200,5 +200,13 @@ public class main1 {
 
 
 
+    }
+    public static void main (String [] args){
+        try{
+
+        }
+        catch (Exception e){
+            System.out.print(e);
+        }
     }
 }

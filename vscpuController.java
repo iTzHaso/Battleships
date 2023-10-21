@@ -24,7 +24,9 @@ public class vscpuController implements Initializable {
 
 
     private void fillBoards(){
-
+        Image blue = new Image("blue.jpg");
+        pBoard.setGridLinesVisible(true);
+        eBoard.setGridLinesVisible(true);
     }
 
 }

@@ -26,5 +26,6 @@ public class mainMenuController{
         Scene s = new Scene(vscpuWindow);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(s);
+        window.setResizable(false);
     }
 }

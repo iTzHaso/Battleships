@@ -6,7 +6,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+
+import javax.swing.*;
 
 public class setupController {
     static int row = 10;
@@ -15,6 +21,7 @@ public class setupController {
     static String A;
     static int[][] battleField = new int[row][column];
     static int[][] enemyBattleField = new int[row][column];
+
 
     @FXML
     public TextField fiveShipPos;
@@ -35,6 +42,8 @@ public class setupController {
     public TextField twoShipPos;
 
 
+
+
     private static void twoShip(String A) {
         String str1 = "";
         String str2 = "";
@@ -42,9 +51,14 @@ public class setupController {
         str2 += A.charAt(1);
         x = Integer.parseInt(str1);
         y = Integer.parseInt(str2);
+
+
         String Facing = "";
         System.out.println(Facing);
         battleField[x][y] = 1;
+
+
+
         switch (Facing) {
             case "l":
                 battleField[x - 2][y - 1] = 1;
@@ -166,6 +180,7 @@ public class setupController {
     public void placeShips(MouseEvent event){
         String twoShip = twoShipPos.getText();
         twoShip(twoShip);
+
         String threeShipOne = threeShipOnePos.getText();
         threeShip(threeShipOne);
         String threeShipTwo = threeShipTwoPos.getText();

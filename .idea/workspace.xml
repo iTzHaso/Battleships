@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="da2d7f5a-efa2-4c5a-a3ce-44485b41003f" name="Changes" comment="basic gui set up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS370-Group-3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CS370-Group-3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/setupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/setupController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/vscpuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/vscpuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/setupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vscpuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/vscpuController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697888748583</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="basic gui set up">
+      <created>1698173278615</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698173278615</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

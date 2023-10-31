@@ -1,4 +1,6 @@
-package Battleship;
+import java.util.*;
+
+
 
 public class Ship {
     private int HP;
@@ -20,7 +22,7 @@ public class Ship {
     public void setName(String name){
         this.name=name;
     }
-    public int move(){
+    /*public int move(){
 
-    }
+    }*/
 }

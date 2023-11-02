@@ -1,0 +1,284 @@
+Index: setupController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import javafx.fxml.FXML;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.Node;\r\nimport javafx.scene.Parent;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.TextField;\r\nimport javafx.scene.input.MouseEvent;\r\nimport javafx.scene.layout.GridPane;\r\nimport javafx.stage.Stage;\r\n\r\nimport javafx.scene.paint.Color;\r\nimport javafx.scene.shape.Rectangle;\r\n\r\nimport javax.swing.*;\r\n\r\npublic class setupController {\r\n    static int row = 10;\r\n    static int column = 10;\r\n    static int x, y;\r\n    static String A;\r\n    static int[][] battleField = new int[row][column];\r\n    static int[][] enemyBattleField = new int[row][column];\r\n\r\n\r\n    @FXML\r\n    public TextField fiveShipPos;\r\n\r\n    @FXML\r\n    public TextField fourShipPos;\r\n\r\n    @FXML\r\n    public Button submitPositions;\r\n\r\n    @FXML\r\n    public TextField threeShipOnePos;\r\n\r\n    @FXML\r\n    public TextField threeShipTwoPos;\r\n\r\n    @FXML\r\n    public TextField twoShipPos;\r\n\r\n\r\n\r\n\r\n    private static void twoShip(String A) {\r\n        String str1 = \"\";\r\n        String str2 = \"\";\r\n        str1 += A.charAt(0);\r\n        str2 += A.charAt(1);\r\n        x = Integer.parseInt(str1);\r\n        y = Integer.parseInt(str2);\r\n\r\n\r\n        String Facing = \"\";\r\n        System.out.println(Facing);\r\n        battleField[x][y] = 1;\r\n\r\n\r\n\r\n        switch (Facing) {\r\n            case \"l\":\r\n                battleField[x - 2][y - 1] = 1;\r\n                break;\r\n            case \"d\":\r\n                battleField[x - 1][y] = 1;\r\n                break;\r\n            case \"r\":\r\n                battleField[x][y - 1] = 1;\r\n                break;\r\n        }\r\n\r\n    }\r\n\r\n    private static void threeShip(String A) {\r\n        String str1 = \"\";\r\n        String str2 = \"\";\r\n        str1 += A.charAt(0);\r\n        str2 += A.charAt(1);\r\n        x = Integer.parseInt(str1);\r\n        y = Integer.parseInt(str2);\r\n        String Facing = \"\";\r\n        battleField[x - 1][y - 1] = 1;\r\n        switch (A) {\r\n            case \"l\":\r\n                battleField[x - 2][y - 1] = 1;\r\n                battleField[x - 3][y - 1] = 1;\r\n                break;\r\n            case \"d\":\r\n                battleField[x - 1][y] = 1;\r\n                battleField[x - 1][y + 1] = 1;\r\n                break;\r\n            case \"r\":\r\n                battleField[x][y - 1] = 1;\r\n                battleField[x + 1][y - 1] = 1;\r\n                break;\r\n        }\r\n\r\n    }\r\n\r\n    private static void fourShip(String A) {\r\n        String str1 = \"\";\r\n        String str2 = \"\";\r\n        str1 += A.charAt(0);\r\n        str2 += A.charAt(1);\r\n        x = Integer.parseInt(str1);\r\n        y = Integer.parseInt(str2);\r\n        String Facing = \"\";\r\n        battleField[x - 1][y - 1] = 1;\r\n        switch (A) {\r\n            case \"l\":\r\n                battleField[x - 2][y - 1] = 1;\r\n                battleField[x - 3][y - 1] = 1;\r\n                battleField[x - 4][y - 1] = 1;\r\n                break;\r\n            case \"d\":\r\n                battleField[x - 1][y] = 1;\r\n                battleField[x - 1][y + 1] = 1;\r\n                battleField[x - 1][y + 2] = 1;\r\n                break;\r\n            case \"r\":\r\n                battleField[x][y - 1] = 1;\r\n                battleField[x + 1][y - 1] = 1;\r\n                battleField[x + 2][y - 1] = 1;\r\n                break;\r\n        }\r\n\r\n    }\r\n    private static void fiveShip(String A) {\r\n        String str1 = \"\";\r\n        String str2 = \"\";\r\n        str1 += A.charAt(0);\r\n        str2 += A.charAt(1);\r\n        x = Integer.parseInt(str1);\r\n        y = Integer.parseInt(str2);\r\n        String Facing = \"\";\r\n        battleField[x - 1][y - 1] = 1;\r\n        switch (A) {\r\n            case \"l\":\r\n                battleField[x - 2][y - 1] = 1;\r\n                battleField[x - 3][y - 1] = 1;\r\n                battleField[x - 4][y - 1] = 1;\r\n                battleField[x - 5][y - 1] = 1;\r\n                break;\r\n            case \"d\":\r\n                battleField[x - 1][y] = 1;\r\n                battleField[x - 1][y + 1] = 1;\r\n                battleField[x - 1][y + 2] = 1;\r\n                battleField[x - 1][y + 3] = 1;\r\n                break;\r\n            case \"r\":\r\n                battleField[x][y - 1] = 1;\r\n                battleField[x + 1][y - 1] = 1;\r\n                battleField[x + 2][y - 1] = 1;\r\n                battleField[x + 3][y - 1] = 1;\r\n                break;\r\n        }\r\n    }\r\n    private static void fillenemyBattleField() {\r\n        enemyBattleField[1][1] = 1;\r\n        enemyBattleField[2][1] = 1;\r\n        enemyBattleField[7][2] = 1;\r\n        enemyBattleField[7][3] = 1;\r\n        enemyBattleField[7][4] = 1;\r\n        enemyBattleField[5][9] = 1;\r\n        enemyBattleField[6][9] = 1;\r\n        enemyBattleField[7][9] = 1;\r\n        enemyBattleField[8][9] = 1;\r\n        enemyBattleField[1][4] = 1;\r\n        enemyBattleField[1][5] = 1;\r\n        enemyBattleField[1][6] = 1;\r\n        enemyBattleField[1][7] = 1;\r\n        enemyBattleField[1][8] = 1;\r\n        enemyBattleField[6][2] = 1;\r\n        enemyBattleField[6][3] = 1;\r\n        enemyBattleField[6][4] = 1;\r\n\r\n    }\r\n    public void placeShips(MouseEvent event){\r\n        String twoShip = twoShipPos.getText();\r\n        twoShip(twoShip);\r\n\r\n        String threeShipOne = threeShipOnePos.getText();\r\n        threeShip(threeShipOne);\r\n        String threeShipTwo = threeShipTwoPos.getText();\r\n        threeShip(threeShipTwo);\r\n        String fourShip = fourShipPos.getText();\r\n        fourShip(fourShip);\r\n        String fiveShip = fiveShipPos.getText();\r\n        fourShip(fiveShip);\r\n        fillenemyBattleField();\r\n        try{\r\n            Parent vscpuWindow = FXMLLoader.load(main1.class.getResource(\"vscpu.fxml\"));\r\n            Scene s = new Scene(vscpuWindow);\r\n            Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();\r\n            window.setScene(s);\r\n            window.setResizable(false);\r\n        }\r\n        catch(Exception e){\r\n            System.out.print(e);\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/setupController.java b/setupController.java
+--- a/setupController.java	
++++ b/setupController.java	
+@@ -51,14 +51,12 @@
+         str2 += A.charAt(1);
+         x = Integer.parseInt(str1);
+         y = Integer.parseInt(str2);
+-
+-
+         String Facing = "";
++        Facing +=A.charAt(2);
+         System.out.println(Facing);
+         battleField[x][y] = 1;
+ 
+ 
+-
+         switch (Facing) {
+             case "l":
+                 battleField[x - 2][y - 1] = 1;
+@@ -81,10 +79,12 @@
+         x = Integer.parseInt(str1);
+         y = Integer.parseInt(str2);
+         String Facing = "";
++        Facing +=A.charAt(2);
+         battleField[x - 1][y - 1] = 1;
+         switch (A) {
+             case "l":
+                 battleField[x - 2][y - 1] = 1;
++
+                 battleField[x - 3][y - 1] = 1;
+                 break;
+             case "d":
+@@ -107,6 +107,7 @@
+         x = Integer.parseInt(str1);
+         y = Integer.parseInt(str2);
+         String Facing = "";
++        Facing +=A.charAt(2);
+         battleField[x - 1][y - 1] = 1;
+         switch (A) {
+             case "l":
+@@ -135,6 +136,7 @@
+         x = Integer.parseInt(str1);
+         y = Integer.parseInt(str2);
+         String Facing = "";
++        Facing +=A.charAt(2);
+         battleField[x - 1][y - 1] = 1;
+         switch (A) {
+             case "l":
+@@ -156,6 +158,7 @@
+                 battleField[x + 3][y - 1] = 1;
+                 break;
+         }
++
+     }
+     private static void fillenemyBattleField() {
+         enemyBattleField[1][1] = 1;
+Index: vscpuController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import javafx.fxml.FXML;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.fxml.Initializable;\r\nimport javafx.geometry.Insets;\r\nimport javafx.scene.Parent;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.image.ImageView;\r\nimport javafx.scene.layout.GridPane;\r\nimport javafx.scene.image.Image;\r\nimport javafx.scene.input.MouseEvent;\r\nimport javafx.scene.paint.Color;\r\nimport javafx.scene.text.Text;\r\nimport javafx.stage.Stage;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.TextField;\r\nimport javafx.scene.shape.Rectangle;\r\n\r\nimport javax.swing.*;\r\nimport java.net.URL;\r\nimport java.util.Random;\r\nimport java.util.ResourceBundle;\r\n\r\nimport static java.lang.Character.isDigit;\r\n\r\npublic class vscpuController extends setupController implements Initializable{\r\n\r\n    int playerRemainingHits = 17;\r\n    int enemyRemainingHits = 17;\r\n    boolean wl = false;\r\n    Random rand = new Random();\r\n    int rMax = 9;\r\n    int rMin = 0;\r\n\r\n    @FXML\r\n    private GridPane eBoard;\r\n\r\n    @FXML\r\n    private GridPane pBoard;\r\n\r\n    @FXML\r\n    private Button submitAttack;\r\n\r\n    @FXML\r\n    private TextField target;\r\n\r\n    @FXML\r\n    private Text enemyHMNotif;\r\n\r\n    @FXML\r\n    private Text hmNotif;\r\n\r\n    @Override\r\n    public void initialize(URL url, ResourceBundle resourceBundle) {\r\n        eBoard.setGridLinesVisible(true);\r\n        eBoard.setStyle(\"-fx-background-Color: blue\");\r\n        pBoard.setGridLinesVisible(true);\r\n        pBoard.setStyle(\"-fx-background-Color: blue\");\r\n\r\n\r\n\r\n        for(int i = 1; i < 10; i++){\r\n            for(int j = 1; j < 10; j++) {\r\n                if (enemyBattleField[i][j] == 1) {\r\n\r\n                    Rectangle Rect = new Rectangle(39, 39);\r\n                    Rect.setFill(Color.BLACK);\r\n                    pBoard.add(Rect, i - 1, j - 1);\r\n\r\n                }\r\n\r\n            }\r\n        }\r\n    }\r\n\r\n\r\n\r\n    public void submitAttack(MouseEvent event){\r\n        int xcoord;\r\n        int ycoord;\r\n        String str1 = \"\";\r\n        String str2 = \"\";\r\n        String attackTarget = target.getText();\r\n        str1 += attackTarget.charAt(0);\r\n        xcoord = Integer.parseInt(str1);\r\n\r\n\r\n\r\n        for (int i = 1; i<=attackTarget.length(); i++){\r\n            if (isDigit(attackTarget.charAt(i))){\r\n                str2 += attackTarget.charAt(i);\r\n                i = attackTarget.length()+1;\r\n            }\r\n        }\r\n        ycoord = Integer.parseInt(str2);\r\n        System.out.println(xcoord);\r\n        System.out.print(ycoord);\r\n\r\n\r\n\r\n        if(enemyBattleField[xcoord][ycoord] == 1){\r\n            enemyBattleField [xcoord][ycoord] = 0;\r\n            hmNotif.setText(\"Hit!\");\r\n\r\n            Rectangle Rect = new Rectangle(39, 39);\r\n            Rect.setFill(Color.RED);\r\n            eBoard.add(Rect,xcoord - 1,ycoord - 1 );\r\n\r\n\r\n            enemyRemainingHits--;\r\n            if (enemyRemainingHits == 0){\r\n                hmNotif.setText(\"All enemy ships sunk! You win!\");\r\n                enemyHMNotif.setText(\"\");\r\n                wl = true;\r\n            }\r\n        }\r\n        else{\r\n            hmNotif.setText(\"Miss!\");\r\n\r\n            Rectangle Rect = new Rectangle(39, 39);\r\n            Rect.setFill(Color.WHITE);\r\n            eBoard.add(Rect,xcoord - 1,ycoord - 1 );\r\n        }\r\n        if (!wl){\r\n            xcoord = rand.nextInt(rMax-rMin) + 1;\r\n            ycoord = rand.nextInt(rMax-rMin) + 1;\r\n\r\n\r\n        }\r\n        if (battleField [xcoord][ycoord] == 1){\r\n            battleField [xcoord][ycoord] = 9;\r\n            enemyHMNotif.setText(\"Enemy attacked [\" + xcoord + \"], [\" + ycoord + \"], Hit!\");\r\n            playerRemainingHits -= 1;\r\n\r\n            Rectangle Rect = new Rectangle(39, 39);\r\n            Rect.setFill(Color.RED);\r\n            pBoard.add(Rect,xcoord - 1,ycoord - 1 );\r\n        }\r\n        else{\r\n            enemyHMNotif.setText(\"Enemy attacked [\" + xcoord + \"], [\" + ycoord + \"], Miss!\");\r\n\r\n            Rectangle Rect = new Rectangle(39, 39);\r\n            Rect.setFill(Color.WHITE);\r\n            pBoard.add(Rect,xcoord - 1,ycoord - 1 );\r\n        }\r\n        if (playerRemainingHits == 0){\r\n            enemyHMNotif.setText(\"All ships sunk! You lose!\");\r\n            hmNotif.setText(\"\");\r\n            wl = true;\r\n        }\r\n    }\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/vscpuController.java b/vscpuController.java
+--- a/vscpuController.java	
++++ b/vscpuController.java	
+@@ -60,7 +60,7 @@
+ 
+         for(int i = 1; i < 10; i++){
+             for(int j = 1; j < 10; j++) {
+-                if (enemyBattleField[i][j] == 1) {
++                if (battleField[i][j] == 1) {
+ 
+                     Rectangle Rect = new Rectangle(39, 39);
+                     Rect.setFill(Color.BLACK);
+Index: out/production/CS370-Group-3/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"da2d7f5a-efa2-4c5a-a3ce-44485b41003f\" name=\"Changes\" comment=\"start of the project\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/libraries/lib1.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/CS370-Group-3.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/CS370-Group-3.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/CS370-Group-3/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/CS370-Group-3/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/CS370-Group-3/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/CS370-Group-3/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/CS370-Group-3/CS370-Group-3.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/CS370-Group-3/CS370-Group-3.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/CS370-Group-3/main1.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/CS370-Group-3/main1.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/CS370-Group-3/mainMenuController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/CS370-Group-3/mainMenuController.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/CS370-Group-3/setupController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/CS370-Group-3/setupController.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/CS370-Group-3/vscpuController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/CS370-Group-3/vscpuController.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/setupController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/setupController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/vscpuController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/vscpuController.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"06c8902481499930ff45dc707bb19bc7be7a975b\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\r\n  \"lastFilter\": {\r\n    \"state\": \"OPEN\",\r\n    \"assignee\": \"AndrewSiegf\"\r\n  }\r\n}]]></component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"334a465b-00cc-4d9d-af55-031d147b0790\" />\r\n        <option name=\"url\" value=\"https://github.com/Sheridce/CS370-Group-3.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\"><![CDATA[{\r\n  \"associatedIndex\": 6\r\n}]]></component>\r\n  <component name=\"ProjectId\" id=\"2X47S0esqNWJjbNfV7JQwVbH3YI\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;Andrew__branch2&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/javafx-sdk-21.0.1/lib&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"main1\" type=\"Application\" factoryName=\"Application\" nameIsGenerated=\"true\">\r\n      <option name=\"ALTERNATIVE_JRE_PATH\" value=\"19\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main1\" />\r\n      <module name=\"CS370-Group-3\" />\r\n      <option name=\"VM_PARAMETERS\" value=\"--module-path &quot;C:\\Program Files\\javafx-sdk-21.0.1\\lib&quot; --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.swing\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"da2d7f5a-efa2-4c5a-a3ce-44485b41003f\" name=\"Changes\" comment=\"\" />\r\n      <created>1697876494315</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1697876494315</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"start of the project\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"start of the project\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/CS370-Group-3/.idea/workspace.xml b/out/production/CS370-Group-3/.idea/workspace.xml
+--- a/out/production/CS370-Group-3/.idea/workspace.xml	
++++ b/out/production/CS370-Group-3/.idea/workspace.xml	
+@@ -5,15 +5,7 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="da2d7f5a-efa2-4c5a-a3ce-44485b41003f" name="Changes" comment="start of the project">
+-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/CS370-Group-3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CS370-Group-3.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/.idea/misc.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/CS370-Group-3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/CS370-Group-3.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/main1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/main1.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/mainMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/mainMenuController.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/setupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/setupController.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/vscpuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/vscpuController.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/setupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/setupController.java" afterDir="false" />
+@@ -39,12 +31,12 @@
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+-  "lastFilter": {
+-    "state": "OPEN",
+-    "assignee": "AndrewSiegf"
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;AndrewSiegf&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="GithubPullRequestsUISettings">
+     <option name="selectedUrlAndAccountId">
+       <UrlAndAccount>
+@@ -56,9 +48,9 @@
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+-  <component name="ProjectColorInfo"><![CDATA[{
+-  "associatedIndex": 6
+-}]]></component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 6
++}</component>
+   <component name="ProjectId" id="2X47S0esqNWJjbNfV7JQwVbH3YI" />
+   <component name="ProjectLevelVcsManager">
+     <ConfirmationsSetting value="2" id="Add" />
+@@ -100,6 +92,15 @@
+       <option name="presentableId" value="Default" />
+       <updated>1697876494315</updated>
+     </task>
++    <task id="LOCAL-00001" summary="start of the project">
++      <option name="closed" value="true" />
++      <created>1698173165623</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1698173165623</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"da2d7f5a-efa2-4c5a-a3ce-44485b41003f\" name=\"Changes\" comment=\"start of the project\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/libraries/lib1.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/CS370-Group-3.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/CS370-Group-3.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/CS370-Group-3/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/CS370-Group-3/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/CS370-Group-3/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/CS370-Group-3/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/CS370-Group-3/CS370-Group-3.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/CS370-Group-3/CS370-Group-3.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/CS370-Group-3/main1.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/CS370-Group-3/main1.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/CS370-Group-3/mainMenuController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/CS370-Group-3/mainMenuController.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/CS370-Group-3/setupController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/CS370-Group-3/setupController.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/CS370-Group-3/vscpuController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/CS370-Group-3/vscpuController.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/setupController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/setupController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/vscpuController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/vscpuController.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"06c8902481499930ff45dc707bb19bc7be7a975b\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\r\n  \"lastFilter\": {\r\n    \"state\": \"OPEN\",\r\n    \"assignee\": \"AndrewSiegf\"\r\n  }\r\n}]]></component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"334a465b-00cc-4d9d-af55-031d147b0790\" />\r\n        <option name=\"url\" value=\"https://github.com/Sheridce/CS370-Group-3.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\"><![CDATA[{\r\n  \"associatedIndex\": 6\r\n}]]></component>\r\n  <component name=\"ProjectId\" id=\"2X47S0esqNWJjbNfV7JQwVbH3YI\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;Andrew__branch2&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/javafx-sdk-21.0.1/lib&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"main1\" type=\"Application\" factoryName=\"Application\" nameIsGenerated=\"true\">\r\n      <option name=\"ALTERNATIVE_JRE_PATH\" value=\"19\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main1\" />\r\n      <module name=\"CS370-Group-3\" />\r\n      <option name=\"VM_PARAMETERS\" value=\"--module-path &quot;C:\\Program Files\\javafx-sdk-21.0.1\\lib&quot; --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.swing\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"da2d7f5a-efa2-4c5a-a3ce-44485b41003f\" name=\"Changes\" comment=\"\" />\r\n      <created>1697876494315</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1697876494315</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"start of the project\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"start of the project\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -5,15 +5,8 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="da2d7f5a-efa2-4c5a-a3ce-44485b41003f" name="Changes" comment="start of the project">
+-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/CS370-Group-3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CS370-Group-3.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/CS370-Group-3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/CS370-Group-3.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/main1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/main1.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/mainMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/mainMenuController.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/setupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/setupController.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/vscpuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/vscpuController.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/setupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/setupController.java" afterDir="false" />
+@@ -34,17 +27,17 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="06c8902481499930ff45dc707bb19bc7be7a975b" />
++        <entry key="$PROJECT_DIR$" value="Andrew_branch2" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+-  "lastFilter": {
+-    "state": "OPEN",
+-    "assignee": "AndrewSiegf"
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;AndrewSiegf&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="GithubPullRequestsUISettings">
+     <option name="selectedUrlAndAccountId">
+       <UrlAndAccount>
+@@ -56,9 +49,9 @@
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+-  <component name="ProjectColorInfo"><![CDATA[{
+-  "associatedIndex": 6
+-}]]></component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 6
++}</component>
+   <component name="ProjectId" id="2X47S0esqNWJjbNfV7JQwVbH3YI" />
+   <component name="ProjectLevelVcsManager">
+     <ConfirmationsSetting value="2" id="Add" />
+@@ -67,19 +60,19 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;Andrew__branch2&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/javafx-sdk-21.0.1/lib&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "ASKED_ADD_EXTERNAL_FILES": "true",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "git-widget-placeholder": "ad2fcb70",
++    "last_opened_file_path": "C:/Program Files/javafx-sdk-21.0.1/lib",
++    "project.structure.last.edited": "Libraries",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.2"
+   }
+-}</component>
++}]]></component>
+   <component name="RunManager">
+     <configuration name="main1" type="Application" factoryName="Application" nameIsGenerated="true">
+       <option name="ALTERNATIVE_JRE_PATH" value="19" />
+@@ -100,9 +93,33 @@
+       <option name="presentableId" value="Default" />
+       <updated>1697876494315</updated>
+     </task>
++    <task id="LOCAL-00001" summary="start of the project">
++      <option name="closed" value="true" />
++      <created>1698173165623</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1698173165623</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
++    <option name="RECENT_FILTERS">
++      <map>
++        <entry key="Branch">
++          <value>
++            <list>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="origin/Alexander_ver" />
++                </option>
++              </RecentGroup>
++            </list>
++          </value>
++        </entry>
++      </map>
++    </option>
+     <option name="TAB_STATES">
+       <map>
+         <entry key="MAIN">

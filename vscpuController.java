@@ -60,7 +60,7 @@ public class vscpuController extends setupController implements Initializable{
 
         for(int i = 1; i < 10; i++){
             for(int j = 1; j < 10; j++) {
-                if (enemyBattleField[i][j] == 1) {
+                if (battleField[i][j] == 1) {
 
                     Rectangle Rect = new Rectangle(39, 39);
                     Rect.setFill(Color.BLACK);

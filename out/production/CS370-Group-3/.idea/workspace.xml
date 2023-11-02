@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da2d7f5a-efa2-4c5a-a3ce-44485b41003f" name="Changes" comment="start of the project">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS370-Group-3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CS370-Group-3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/CS370-Group-3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/CS370-Group-3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/main1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/main1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/mainMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/mainMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/setupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/setupController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/vscpuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/vscpuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/setupController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vscpuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/vscpuController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,17 +23,17 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="06c8902481499930ff45dc707bb19bc7be7a975b" />
+        <entry key="$PROJECT_DIR$" value="Andrew_branch2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "AndrewSiegf"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AndrewSiegf&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -56,9 +45,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2X47S0esqNWJjbNfV7JQwVbH3YI" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -73,7 +62,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Andrew__branch2&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ad2fcb70&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Program Files/javafx-sdk-21.0.1/lib&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,

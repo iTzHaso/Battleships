@@ -65,7 +65,6 @@ public class vscpuController extends setupController implements Initializable{
                     Rectangle Rect = new Rectangle(39, 39);
                     Rect.setFill(Color.BLACK);
                     pBoard.add(Rect, i - 1, j - 1);
-
                 }
 
             }

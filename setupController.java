@@ -51,23 +51,18 @@ public class setupController {
         str2 += A.charAt(1);
         x = Integer.parseInt(str1);
         y = Integer.parseInt(str2);
-
-
         String Facing = "";
-        System.out.println(Facing);
-        battleField[x][y] = 1;
-
-
-
+        Facing +=A.charAt(2);
+        battleField[x ][y] = 1;
         switch (Facing) {
             case "l":
-                battleField[x - 2][y - 1] = 1;
-                break;
-            case "d":
                 battleField[x - 1][y] = 1;
                 break;
+            case "d":
+                battleField[x][y +1] = 1;
+                break;
             case "r":
-                battleField[x][y - 1] = 1;
+                battleField[x +1][y] = 1;
                 break;
         }
 
@@ -81,19 +76,20 @@ public class setupController {
         x = Integer.parseInt(str1);
         y = Integer.parseInt(str2);
         String Facing = "";
-        battleField[x - 1][y - 1] = 1;
-        switch (A) {
+        Facing +=A.charAt(2);
+        battleField[x][y] = 1;
+        switch (Facing) {
             case "l":
-                battleField[x - 2][y - 1] = 1;
-                battleField[x - 3][y - 1] = 1;
+                battleField[x - 1][y] = 1;
+                battleField[x - 2][y] = 1;
                 break;
             case "d":
-                battleField[x - 1][y] = 1;
-                battleField[x - 1][y + 1] = 1;
+                battleField[x][y + 1] = 1;
+                battleField[x][y + 2] = 1;
                 break;
             case "r":
-                battleField[x][y - 1] = 1;
-                battleField[x + 1][y - 1] = 1;
+                battleField[x + 1][y] = 1;
+                battleField[x + 2][y] = 1;
                 break;
         }
 
@@ -107,22 +103,23 @@ public class setupController {
         x = Integer.parseInt(str1);
         y = Integer.parseInt(str2);
         String Facing = "";
-        battleField[x - 1][y - 1] = 1;
-        switch (A) {
+        Facing +=A.charAt(2);
+        battleField[x][y] = 1;
+        switch (Facing) {
             case "l":
-                battleField[x - 2][y - 1] = 1;
-                battleField[x - 3][y - 1] = 1;
-                battleField[x - 4][y - 1] = 1;
+                battleField[x - 1][y] = 1;
+                battleField[x - 2][y] = 1;
+                battleField[x - 3][y] = 1;
                 break;
             case "d":
-                battleField[x - 1][y] = 1;
-                battleField[x - 1][y + 1] = 1;
-                battleField[x - 1][y + 2] = 1;
+                battleField[x][y + 1] = 1;
+                battleField[x][y + 2] = 1;
+                battleField[x][y + 3] = 1;
                 break;
             case "r":
-                battleField[x][y - 1] = 1;
-                battleField[x + 1][y - 1] = 1;
-                battleField[x + 2][y - 1] = 1;
+                battleField[x + 1][y] = 1;
+                battleField[x + 2][y] = 1;
+                battleField[x + 3][y] = 1;
                 break;
         }
 
@@ -135,25 +132,26 @@ public class setupController {
         x = Integer.parseInt(str1);
         y = Integer.parseInt(str2);
         String Facing = "";
-        battleField[x - 1][y - 1] = 1;
-        switch (A) {
+        Facing +=A.charAt(2);
+        battleField[x][y] = 1;
+        switch (Facing) {
             case "l":
-                battleField[x - 2][y - 1] = 1;
-                battleField[x - 3][y - 1] = 1;
-                battleField[x - 4][y - 1] = 1;
-                battleField[x - 5][y - 1] = 1;
+                battleField[x - 1][y] = 1;
+                battleField[x - 2][y] = 1;
+                battleField[x - 3][y] = 1;
+                battleField[x - 4][y] = 1;
                 break;
             case "d":
-                battleField[x - 1][y] = 1;
-                battleField[x - 1][y + 1] = 1;
-                battleField[x - 1][y + 2] = 1;
-                battleField[x - 1][y + 3] = 1;
+                battleField[x][y + 1] = 1;
+                battleField[x][y + 2] = 1;
+                battleField[x][y + 3] = 1;
+                battleField[x][y + 4] = 1;
                 break;
             case "r":
-                battleField[x][y - 1] = 1;
-                battleField[x + 1][y - 1] = 1;
-                battleField[x + 2][y - 1] = 1;
-                battleField[x + 3][y - 1] = 1;
+                battleField[x + 1][y] = 1;
+                battleField[x + 2][y] = 1;
+                battleField[x + 3][y] = 1;
+                battleField[x + 4][y] = 1;
                 break;
         }
     }
@@ -180,7 +178,6 @@ public class setupController {
     public void placeShips(MouseEvent event){
         String twoShip = twoShipPos.getText();
         twoShip(twoShip);
-
         String threeShipOne = threeShipOnePos.getText();
         threeShip(threeShipOne);
         String threeShipTwo = threeShipTwoPos.getText();
@@ -190,6 +187,7 @@ public class setupController {
         String fiveShip = fiveShipPos.getText();
         fourShip(fiveShip);
         fillenemyBattleField();
+        printBoard();
         try{
             Parent vscpuWindow = FXMLLoader.load(main1.class.getResource("vscpu.fxml"));
             Scene s = new Scene(vscpuWindow);
@@ -201,4 +199,13 @@ public class setupController {
             System.out.print(e);
         }
     }
+    public static void printBoard(){
+        for(int i=1; i<10; i++){
+            for(int j=1; j<10; j++){
+                System.out.print(battleField[j][i] +" ");
+            }
+            System.out.println();
+        }
+    }
+
 }

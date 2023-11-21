@@ -1,1 +1,1 @@
-package batleshp;
+package battleship;

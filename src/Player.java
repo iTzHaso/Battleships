@@ -9,13 +9,26 @@ public class Player {
         user = setuName(uName);
     }
 
-    private String setuName(String N) {
+    public String setuName(String N) {
         boolean V=false;
         //check if name is usable
         if(N.length() <= 20){
             V=true;
         }
         return N;
+    }
+    public void sunkShip(){
+        shipsAlive--;
+    }
+    public void TPgain(){
+        TP++;
+    }
+    public void TPloss(int A){
+        if (A<TP){
+            TP=TP-A;
+        }else{
+            TP=0;
+        }
     }
 
 }

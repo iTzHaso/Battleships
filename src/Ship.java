@@ -1,52 +1,41 @@
 import java.util.*;
 
 
-public class Ship extends SNode{
+public class Ship{
 //the ship...
     protected int HP, Length;
     protected String name;
-    // determines type of ship maybe
-    protected SNode []slot;
+    // determines type of ship maybe (not yet or at all)
     protected char direction;
     //W=up A=left S=down D=right
     //start from 0 then move down the ship Cord[X(--{A})(++{D})][Y(--{S})(++{W})][f++]
-    //ex. if direction=A the ship would look like this [4] [3] [2] [1] [0] = ship slot
+    //ex. if direction=A the ship would look like this [4] [3] [2] [1] [0] = ship part //[0] is the back of the ship
     //                                                  <-  <-  <-  <-  <-
-    //protected String player;
+    protected int x, y;
+    //ship's first cord
+    protected boolean sunk = false;
+    //keeps track if the ship is sunk
+    //protected String player; (unused)
 
 
 
 
     public Ship(){}
     public Ship(String name, int X, int Y, int length, char face){
-        super();
         setName(name);
-        setCord(X,Y,length,face);
+        setHP(length);
+        setInfo(X,Y,length,face);
     }
 
-    private void setCord(int x, int y, int l, char f) {
+    private void setInfo(int x, int y, int l, char f) {
         direction=f;
-        int xMove=0,yMove=0;
-        int xm=0, ym=0;
-        if (f=='W'){
-            xMove=1;
-        }else if(f=='S'){
-            xMove=-1;
-        }else if(f=='A'){
-            yMove=-1;
-        }else if(f=='D'){
-            yMove=1;
-        }
-
-        for (int i=0;i < l;i++) {
-            slot [l]= new SNode(X+xm, Y+ym, i);
-            xm=xm+xMove;
-            ym=ym+yMove;
-        }
+        this.x=x;
+        this.y=y;
+        Length=l;
     }
 
-    public int hit(int hp){
-        return hp--;
+    public int hit(){
+        return HP--;
     }
     public String getName(){
         return this.name;
@@ -55,12 +44,29 @@ public class Ship extends SNode{
         this.name=name;
     }
     public void move(int X, int Y, char F){
-
+        x=X;
+        y=Y;
+        direction=F;
     }
-    public void sink(){
-
+    public boolean getSink(){
+        return sunk;
+    }
+    public void setSink(boolean s){
+        sunk=s;
     }
     public int getLength(){
         return Length;
+    }
+    public char getDirection(){
+        return direction;
+    }
+    public void setHP(int L){
+        HP=L;
+    }
+    public int getX(){
+        return x;
+    }
+    public int getY(){
+        return y;
     }
 }

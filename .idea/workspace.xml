@@ -4,20 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da2d7f5a-efa2-4c5a-a3ce-44485b41003f" name="Changes" comment="Still behind">
-      <change afterPath="$PROJECT_DIR$/src/EBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SNode.java" afterDir="false" />
+    <list default="true" id="da2d7f5a-efa2-4c5a-a3ce-44485b41003f" name="Changes" comment="Even more bare bones (What am I even doing)">
+      <change afterPath="$PROJECT_DIR$/src/CPU.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/SUB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/Board.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/Cursor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/EBoard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/SNode.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/Ship.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/Ship.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/vscpuController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cursor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cursor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EBoard.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SUB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/package-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699383761914</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="What am i even doing">
+      <created>1700594833173</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700594833173</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,7 +150,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Still behind" />
-    <option name="LAST_COMMIT_MESSAGE" value="Still behind" />
+    <MESSAGE value="Even more bare bones (What am I even doing)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Even more bare bones (What am I even doing)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CS370_Group_3$main1.ic" NAME="main1 Coverage Results" MODIFIED="1698774772496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

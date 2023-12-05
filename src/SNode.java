@@ -1,5 +1,5 @@
 public class SNode {
-//the individual ship parts
+//the individual ship parts [no longer used]
 
     protected int X,Y,S; //X & Y = Cords S = what position it is in the ship
 

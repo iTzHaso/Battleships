@@ -13,7 +13,7 @@ public class Player {
         boolean V=false;
         //check if name is usable
         if(N.length() <= 20){
-            V=true;
+            V = true;
         }
         return N;
     }
@@ -21,6 +21,7 @@ public class Player {
         shipsAlive--;
     }
     public void TPgain(){
+        //passive TP gain per turn
         TP++;
     }
     public void TPloss(int A){
@@ -29,6 +30,9 @@ public class Player {
         }else{
             TP=0;
         }
+    }
+    public int getTP(){
+        return TP;
     }
 
 }

@@ -1,3 +1,7 @@
+//how my comments work
+//the code;
+//the description
+
 public class CPU {
     //use when playing vs the computer
     int x,y;

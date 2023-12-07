@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da2d7f5a-efa2-4c5a-a3ce-44485b41003f" name="Changes" comment="basic gui set up">
+    <list default="true" id="da2d7f5a-efa2-4c5a-a3ce-44485b41003f" name="Changes" comment="fixed array fill issues">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS370-Group-3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CS370-Group-3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/CS370-Group-3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/CS370-Group-3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/main1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/main1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/mainMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/mainMenuController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/setupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/setupController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CS370-Group-3/vscpuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS370-Group-3/vscpuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/setupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vscpuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/vscpuController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +50,8 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/CSsku/Downloads/javafx-sdk-21.0.1/lib/javafx.web.jar&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
 }</component>
   <component name="RunManager">
@@ -84,12 +89,20 @@
       <option name="project" value="LOCAL" />
       <updated>1698173278615</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed array fill issues">
+      <created>1698177755663</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698177755663</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="basic gui set up" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic gui set up" />
+    <MESSAGE value="fixed array fill issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed array fill issues" />
   </component>
 </project>

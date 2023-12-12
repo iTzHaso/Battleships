@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="1054.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vscpuController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="1054.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vscpuController">
    <children>
       <AnchorPane prefHeight="547.0" prefWidth="405.0">
          <children>
@@ -161,6 +161,12 @@
             <Text layoutX="59.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select attack target (Example: 2, 2)" wrappingWidth="105.13671875" />
             <Text fx:id="hmNotif" layoutX="18.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="189.13671875" />
             <Text fx:id="enemyHMNotif" layoutX="18.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="189.13671875" />
+            <TextField fx:id="enterChat" layoutX="37.0" layoutY="289.0" prefHeight="18.0" prefWidth="155.0" />
+            <Button fx:id="chatSend" layoutX="40.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#printChat" prefHeight="30.0" prefWidth="143.0" text="Send" />
+            <Text fx:id="chat1" layoutX="35.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="155.0" />
+            <Text fx:id="chat2" layoutX="35.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="155.0" />
+            <Text fx:id="chat3" layoutX="35.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="155.0" />
+            <Text fx:id="chat4" layoutX="35.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="155.0" />
          </children></AnchorPane>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="547.0" prefWidth="416.0">
          <children>

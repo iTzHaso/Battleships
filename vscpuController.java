@@ -49,6 +49,34 @@ public class vscpuController extends setupController implements Initializable{
     @FXML
     private Text hmNotif;
 
+    @FXML
+    private Text chat1;
+
+    @FXML
+    private Text chat2;
+
+    @FXML
+    private Text chat3;
+
+    @FXML
+    private Text chat4;
+
+    @FXML
+    private Button chatSend;
+
+    @FXML
+    private TextField enterChat;
+
+    @FXML
+    void printChat(MouseEvent event) {
+        chat4.setText(chat3.getText());
+        chat3.setText(chat2.getText());
+        chat2.setText(chat1.getText());
+        chat1.setText(enterChat.getText());
+
+
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         eBoard.setGridLinesVisible(true);

@@ -6,13 +6,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
-
-import javax.swing.*;
+import java.util.Random;
 
 public class setupController {
     static int row = 10;
@@ -21,7 +16,8 @@ public class setupController {
     static String A;
     static int[][] battleField = new int[row][column];
     static int[][] enemyBattleField = new int[row][column];
-
+    static Random rand = new Random();
+    static int ran;
 
     @FXML
     public TextField fiveShipPos;
@@ -68,6 +64,19 @@ public class setupController {
 
     }
 
+    private static void EtwoShip() {
+        int x, y;
+        x = rand.nextInt(4)+6;
+        y = rand.nextInt(3)+1;
+        enemyBattleField[x][y] = 1;
+        if(y <= 1){
+            enemyBattleField[x][y + 1] = 1;
+        }else{
+            enemyBattleField[x][y - 1] = 1;
+        }
+
+    }
+
     private static void threeShip(String A) {
         String str1 = "";
         String str2 = "";
@@ -91,6 +100,38 @@ public class setupController {
                 battleField[x + 1][y] = 1;
                 battleField[x + 2][y] = 1;
                 break;
+        }
+
+    }
+
+    private static void EthreeShip1() {
+        int x, y;
+        x = rand.nextInt(5)+1;
+        y = rand.nextInt(3)+1;
+        enemyBattleField[x][y] = 1;
+
+        if(x < 3){
+            enemyBattleField[x + 1][y] = 1;
+            enemyBattleField[x + 2][y] = 1;
+        }else{
+            enemyBattleField[x - 1][y] = 1;
+            enemyBattleField[x - 2][y] = 1;
+        }
+
+    }
+
+    private static void EthreeShip2() {
+        int x, y;
+        x = rand.nextInt(4)+1;
+        y = rand.nextInt(4)+4;
+        enemyBattleField[x][y] = 1;
+
+        if(y >6){
+            enemyBattleField[x][y - 1] = 1;
+            enemyBattleField[x][y - 2] = 1;
+        }else{
+            enemyBattleField[x][y + 1] = 1;
+            enemyBattleField[x][y + 2] = 1;
         }
 
     }
@@ -124,6 +165,26 @@ public class setupController {
         }
 
     }
+
+
+    private static void EfourShip() {
+        int x, y;
+        x = rand.nextInt(6)+4;
+        y = rand.nextInt(4)+4;
+        enemyBattleField[x][y] = 1;
+        if(x < 7){
+            enemyBattleField[x + 1][y] = 1;
+            enemyBattleField[x + 2][y] = 1;
+            enemyBattleField[x + 3][y] = 1;
+        }else{
+            enemyBattleField[x - 1][y] = 1;
+            enemyBattleField[x - 2][y] = 1;
+            enemyBattleField[x - 3][y] = 1;
+        }
+
+    }
+
+
     private static void fiveShip(String A) {
         String str1 = "";
         String str2 = "";
@@ -155,26 +216,27 @@ public class setupController {
                 break;
         }
     }
-    private static void fillenemyBattleField() {
-        enemyBattleField[1][1] = 1;
-        enemyBattleField[2][1] = 1;
-        enemyBattleField[7][2] = 1;
-        enemyBattleField[7][3] = 1;
-        enemyBattleField[7][4] = 1;
-        enemyBattleField[5][9] = 1;
-        enemyBattleField[6][9] = 1;
-        enemyBattleField[7][9] = 1;
-        enemyBattleField[8][9] = 1;
-        enemyBattleField[1][4] = 1;
-        enemyBattleField[1][5] = 1;
-        enemyBattleField[1][6] = 1;
-        enemyBattleField[1][7] = 1;
-        enemyBattleField[1][8] = 1;
-        enemyBattleField[6][2] = 1;
-        enemyBattleField[6][3] = 1;
-        enemyBattleField[6][4] = 1;
 
+
+    private static void EfiveShip() {
+        int x, y;
+        x = rand.nextInt(9)+1;
+        y = rand.nextInt(2)+8;
+        enemyBattleField[x][y] = 1;
+
+        if(x < 5){
+            enemyBattleField[x + 1][y] = 1;
+            enemyBattleField[x + 2][y] = 1;
+            enemyBattleField[x + 3][y] = 1;
+            enemyBattleField[x + 4][y] = 1;
+        }else{
+            enemyBattleField[x - 1][y] = 1;
+            enemyBattleField[x - 2][y] = 1;
+            enemyBattleField[x - 3][y] = 1;
+            enemyBattleField[x - 4][y] = 1;
+        }
     }
+
     public void placeShips(MouseEvent event){
         String twoShip = twoShipPos.getText();
         twoShip(twoShip);
@@ -186,7 +248,11 @@ public class setupController {
         fourShip(fourShip);
         String fiveShip = fiveShipPos.getText();
         fourShip(fiveShip);
-        fillenemyBattleField();
+        EtwoShip();
+        EthreeShip1();
+        EthreeShip2();
+        EfourShip();
+        EfiveShip();
         printBoard();
         try{
             Parent vscpuWindow = FXMLLoader.load(main1.class.getResource("vscpu.fxml"));

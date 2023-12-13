@@ -247,7 +247,7 @@ public class setupController {
         String fourShip = fourShipPos.getText();
         fourShip(fourShip);
         String fiveShip = fiveShipPos.getText();
-        fourShip(fiveShip);
+        fiveShip(fiveShip);
         EtwoShip();
         EthreeShip1();
         EthreeShip2();

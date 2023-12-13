@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="1054.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vscpuController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="1054.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vscpuController">
    <children>
       <AnchorPane prefHeight="547.0" prefWidth="405.0">
          <children>
@@ -18,7 +18,6 @@
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -37,7 +36,6 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <SwingNode />
@@ -49,7 +47,6 @@
                   <SwingNode GridPane.columnIndex="6" />
                   <SwingNode GridPane.columnIndex="7" />
                   <SwingNode GridPane.columnIndex="8" />
-                  <SwingNode GridPane.columnIndex="9" />
                   <SwingNode GridPane.rowIndex="1" />
                   <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="1" />
@@ -59,7 +56,6 @@
                   <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="1" />
                   <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="1" />
                   <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="1" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="1" />
                   <SwingNode GridPane.rowIndex="2" />
                   <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="2" />
@@ -69,7 +65,6 @@
                   <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="2" />
                   <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="2" />
                   <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="2" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="2" />
                   <SwingNode GridPane.rowIndex="2" />
                   <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="2" />
@@ -79,7 +74,6 @@
                   <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="2" />
                   <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="2" />
                   <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="2" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="2" />
                   <SwingNode GridPane.rowIndex="3" />
                   <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="3" />
@@ -89,7 +83,6 @@
                   <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="3" />
                   <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="3" />
                   <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="3" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="3" />
                   <SwingNode GridPane.rowIndex="4" />
                   <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="4" />
                   <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="4" />
@@ -99,7 +92,6 @@
                   <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="4" />
                   <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="4" />
                   <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="4" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="4" />
                   <SwingNode GridPane.rowIndex="5" />
                   <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="5" />
                   <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="5" />
@@ -109,7 +101,6 @@
                   <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="5" />
                   <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="5" />
                   <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="5" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="5" />
                   <SwingNode GridPane.rowIndex="6" />
                   <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="6" />
                   <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="6" />
@@ -119,7 +110,6 @@
                   <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="6" />
                   <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="6" />
                   <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="6" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="6" />
                   <SwingNode GridPane.rowIndex="7" />
                   <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="7" />
                   <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="7" />
@@ -129,7 +119,6 @@
                   <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="7" />
                   <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="7" />
                   <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="7" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="7" />
                   <SwingNode GridPane.rowIndex="8" />
                   <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="8" />
                   <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="8" />
@@ -139,17 +128,6 @@
                   <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="8" />
                   <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="8" />
                   <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="8" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="8" />
-                  <SwingNode GridPane.rowIndex="9" />
-                  <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                  <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="9" />
-                  <SwingNode GridPane.columnIndex="3" GridPane.rowIndex="9" />
-                  <SwingNode GridPane.columnIndex="4" GridPane.rowIndex="9" />
-                  <SwingNode GridPane.columnIndex="5" GridPane.rowIndex="9" />
-                  <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="9" />
-                  <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="9" />
-                  <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="9" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="9" />
                </children>
             </GridPane>
          </children>
@@ -181,10 +159,8 @@
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                </columnConstraints>
                <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -205,7 +181,6 @@
                   <SwingNode GridPane.columnIndex="6" />
                   <SwingNode GridPane.columnIndex="7" />
                   <SwingNode GridPane.columnIndex="8" />
-                  <SwingNode GridPane.columnIndex="9" />
                   <SwingNode GridPane.rowIndex="1" />
                   <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="1" />
@@ -215,7 +190,6 @@
                   <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="1" />
                   <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="1" />
                   <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="1" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="1" />
                   <SwingNode GridPane.rowIndex="2" />
                   <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="2" />
@@ -225,7 +199,6 @@
                   <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="2" />
                   <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="2" />
                   <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="2" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="2" />
                   <SwingNode GridPane.rowIndex="2" />
                   <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="2" />
@@ -235,7 +208,6 @@
                   <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="2" />
                   <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="2" />
                   <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="2" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="2" />
                   <SwingNode GridPane.rowIndex="3" />
                   <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="3" />
@@ -245,7 +217,6 @@
                   <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="3" />
                   <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="3" />
                   <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="3" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="3" />
                   <SwingNode GridPane.rowIndex="4" />
                   <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="4" />
                   <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="4" />
@@ -255,7 +226,6 @@
                   <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="4" />
                   <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="4" />
                   <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="4" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="4" />
                   <SwingNode GridPane.rowIndex="5" />
                   <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="5" />
                   <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="5" />
@@ -265,7 +235,6 @@
                   <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="5" />
                   <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="5" />
                   <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="5" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="5" />
                   <SwingNode GridPane.rowIndex="6" />
                   <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="6" />
                   <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="6" />
@@ -275,7 +244,6 @@
                   <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="6" />
                   <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="6" />
                   <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="6" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="6" />
                   <SwingNode GridPane.rowIndex="7" />
                   <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="7" />
                   <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="7" />
@@ -285,7 +253,6 @@
                   <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="7" />
                   <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="7" />
                   <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="7" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="7" />
                   <SwingNode GridPane.rowIndex="8" />
                   <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="8" />
                   <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="8" />
@@ -295,17 +262,6 @@
                   <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="8" />
                   <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="8" />
                   <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="8" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="8" />
-                  <SwingNode GridPane.rowIndex="9" />
-                  <SwingNode GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                  <SwingNode GridPane.columnIndex="2" GridPane.rowIndex="9" />
-                  <SwingNode GridPane.columnIndex="3" GridPane.rowIndex="9" />
-                  <SwingNode GridPane.columnIndex="4" GridPane.rowIndex="9" />
-                  <SwingNode GridPane.columnIndex="5" GridPane.rowIndex="9" />
-                  <SwingNode GridPane.columnIndex="6" GridPane.rowIndex="9" />
-                  <SwingNode GridPane.columnIndex="7" GridPane.rowIndex="9" />
-                  <SwingNode GridPane.columnIndex="8" GridPane.rowIndex="9" />
-                  <SwingNode GridPane.columnIndex="9" GridPane.rowIndex="9" />
                </children>
             </GridPane>
          </children>

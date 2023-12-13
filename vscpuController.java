@@ -90,7 +90,7 @@ public class vscpuController extends setupController implements Initializable{
             for(int j = 1; j < 10; j++) {
                 if (battleField[i][j] == 1) {
 
-                    Rectangle Rect = new Rectangle(39, 39);
+                    Rectangle Rect = new Rectangle(44, 43);
                     Rect.setFill(Color.BLACK);
                     pBoard.add(Rect, i - 1, j - 1);
                 }
@@ -128,7 +128,7 @@ public class vscpuController extends setupController implements Initializable{
             enemyBattleField [xcoord][ycoord] = 0;
             hmNotif.setText("Hit!");
 
-            Rectangle Rect = new Rectangle(39, 39);
+            Rectangle Rect = new Rectangle(44, 43);
             Rect.setFill(Color.RED);
             eBoard.add(Rect,xcoord - 1,ycoord - 1 );
 
@@ -143,7 +143,7 @@ public class vscpuController extends setupController implements Initializable{
         else{
             hmNotif.setText("Miss!");
 
-            Rectangle Rect = new Rectangle(39, 39);
+            Rectangle Rect = new Rectangle(44, 43);
             Rect.setFill(Color.WHITE);
             eBoard.add(Rect,xcoord - 1,ycoord - 1 );
         }
@@ -158,14 +158,14 @@ public class vscpuController extends setupController implements Initializable{
             enemyHMNotif.setText("Enemy attacked [" + xcoord + "], [" + ycoord + "], Hit!");
             playerRemainingHits -= 1;
 
-            Rectangle Rect = new Rectangle(39, 39);
+            Rectangle Rect = new Rectangle(44, 43);
             Rect.setFill(Color.RED);
             pBoard.add(Rect,xcoord - 1,ycoord - 1 );
         }
         else{
             enemyHMNotif.setText("Enemy attacked [" + xcoord + "], [" + ycoord + "], Miss!");
 
-            Rectangle Rect = new Rectangle(39, 39);
+            Rectangle Rect = new Rectangle(44, 43);
             Rect.setFill(Color.WHITE);
             pBoard.add(Rect,xcoord - 1,ycoord - 1 );
         }
